@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Build Your Resume</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Build Your Resume</h2>
+
+  <form id="resumeForm">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" id="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label for="education">Education</label>
+      <textarea class="form-control" id="education" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="skills">Skills</label>
+      <textarea class="form-control" id="skills" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Experience</label>
+      <textarea class="form-control" id="experience"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="templateSelect">Select Template</label>
+      <select class="form-control" id="templateSelect">
+        <option value="modern">Modern</option>
+        <option value="classic">Classic</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Generate Resume</button>
+  </form>
+
+  <hr>
+  <h3 class="text-center mt-5">Resume Preview</h3>
+  <div id="resumePreview" class="p-4 border mt-3"></div>
+  <button id="downloadBtn" class="btn btn-success mt-3">Download as PDF</button>
+</div>
+
+<script>
+  const form = document.getElementById('resumeForm');
+  const preview = document.getElementById('resumePreview');
+  const downloadBtn = document.getElementById('downloadBtn');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const education = document.getElementById('education').value;
+    const skills = document.getElementById('skills').value;
+    const experience = document.getElementById('experience').value;
+    const template = document.getElementById('templateSelect').value;
+
+    preview.innerHTML = `
+      <div class="${template}">
+        <h2>${fullName}</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Education:</strong><br>${education.replace(/\n/g, '<br>')}</p>
+        <p><strong>Skills:</strong><br>${skills.replace(/\n/g, '<br>')}</p>
+        <p><strong>Experience:</strong><br>${experience.replace(/\n/g, '<br>')}</p>
+      </div>
+    `;
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.html(preview, {
+      callback: function (doc) {
+        doc.save("resume.pdf");
+      },
+      x: 10,
+      y: 10
+    });
+  });
+</script>
+
+<style>
+  .modern {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  .classic {
+    font-family: 'Times New Roman', serif;
+    color: #000;
+  }
+</style>
+
+</body>
+</html>

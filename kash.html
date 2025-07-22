@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0077cc;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 50px;
+      background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #4b5563;
+    }
+
+    .hero-text button {
+      padding: 14px 28px;
+      font-size: 16px;
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      background-color: #1e40af;
+    }
+
+    .hero-image img {
+      width: 450px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .hero-image img {
+        width: 90%;
+        margin-top: 30px;
+        
+      }
+    }
+   
+    /* Spin animation */
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Resume Builder</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="templates.html">Templates</a>
+      <a href="resume.html">Resume Builder</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Make a Resume Online</h2>
+      <p>Build your professional resume in minutes with our easy-to-use resume builder. Choose from modern templates and land your dream job faster.</p>
+      <a href="resume.html">
+      <button>Make Yours Now</button></a>
+    </div>
+    <div class="hero-image">
+        <img id="rotatingImage" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Resume Builder" />
+
+     
+    </div>
+  </section>
+  <!-- Resume Preview and Testimonials Section -->
+<section style="background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61'); background-size: cover; padding: 50px 0; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 30px;">Resume Preview</h2>
+  <div style="text-align: center;">
+    <img src="templateH.png" alt="Resume Template" style="max-width: 60%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin-bottom: 50px;">
+  </div>
+
+  <h2 style="text-align: center; font-size: 28px; font-weight: bold; margin-bottom: 40px;">What Our Users Say</h2>
+
+  <div style="max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; margin-bottom: 40px;">
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya S" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px;">
+    <p style="font-style: italic;">“This resume builder made it so easy to apply for my dream job. Highly recommended!”</p>
+    <strong>– Priya S., Marketing Graduate</strong>
+  </div>
+
+  <div style="max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+    <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Aman T" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px;">
+    <p style="font-style: italic;">“I loved the templates and customization options. It really stood out from others.”</p>
+    <strong>– Aman T., Software Engineer</strong>
+  </div>
+</section>
+<footer style="background-color: #141414; color: white; padding: 40px 0;"> <!-- Increased padding -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 200px; margin-right: 20px;">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Company</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">About Us</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Careers</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Contact Us</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px; margin-right: 20px;">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Resources</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">Help Center</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Follow Us</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">Facebook</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Twitter</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px; font-size: 14px;">
+            &copy; 2025 Resume Builder. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
