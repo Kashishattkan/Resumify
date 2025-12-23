@@ -1,0 +1,292 @@
+/* Basic Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #f8f8f8; /* Slightly lighter background */
+      color: #333;
+      line-height: 1.6; /* Improved readability */
+    }
+
+    /* Header Styling */
+    .main-header {
+      background-color: #ffffff;
+      padding: 18px 50px; /* Slightly adjusted padding */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Softer shadow */
+      position: sticky;
+      top: 0;
+      z-index: 1000; /* Higher z-index */
+    }
+
+    .main-header h1 {
+      font-size: 26px; /* Slightly larger heading */
+      color: #222;
+    }
+
+    .main-nav a {
+      margin-left: 28px; /* Slightly adjusted margin */
+      text-decoration: none;
+      color: #555; /* Softer link color */
+      font-weight: 500;
+      transition: color 0.3s ease; /* Smooth transition for hover */
+    }
+
+    .main-nav a:hover {
+      color: #007bff; /* A common, friendly blue */
+    }
+
+    /* Hero Section Styling */
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 50px; /* More generous padding */
+      background: linear-gradient(135deg, #e0f7fa, #e3f2fd); /* Lighter, more inviting gradient */
+      gap: 40px; /* Space between text and image */
+    }
+
+    .hero-content {
+      max-width: 55%; /* Slightly more space for text */
+    }
+
+    .hero-content h2 {
+      font-size: 52px; /* Larger, more impactful heading */
+      color: #1a202c; /* Darker, more professional color */
+      margin-bottom: 22px;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      font-size: 19px; /* Slightly larger paragraph text */
+      margin-bottom: 35px;
+      color: #4a5568; /* Softer paragraph color */
+    }
+
+    .hero-content .cta-button {
+      padding: 15px 30px; /* Larger button */
+      font-size: 17px;
+      background-color: #2c7be5; /* A vibrant blue */
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for subtle effect */
+    }
+
+    .hero-content .cta-button:hover {
+      background-color: #2563eb; /* Darker blue on hover */
+      transform: translateY(-2px); /* Subtle lift effect */
+    }
+
+    .hero-image-container img {
+      width: 480px; /* Slightly larger image */
+      border-radius: 12px; /* Softer corners */
+      box-shadow: 0 12px 25px rgba(0,0,0,0.18); /* More pronounced shadow */
+      object-fit: cover; /* Ensures image covers its area well */
+    }
+
+    /* Responsive Adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        padding: 40px 25px; /* Adjusted padding for mobile */
+        text-align: center; /* Center text on mobile */
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-content h2 {
+        font-size: 40px; /* Smaller heading on mobile */
+      }
+
+      .hero-image-container img {
+        width: 95%; /* Almost full width on mobile */
+        margin-top: 35px;
+      }
+
+      .main-header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      .main-nav {
+        margin-top: 15px;
+      }
+
+      .main-nav a {
+        margin: 0 10px; /* Adjust spacing for mobile nav */
+      }
+    }
+
+    /* Section for Resume Preview and Testimonials */
+    .content-section {
+      background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61') center/cover no-repeat; /* More robust background declaration */
+      padding: 60px 0;
+      font-family: 'Arial', sans-serif; /* A common sans-serif font for content */
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      font-weight: 700; /* Bold */
+      margin-bottom: 40px;
+      color: #2d3748;
+    }
+
+    .resume-preview-image {
+      display: block; /* Ensures image is block-level for margin auto */
+      margin: 0 auto 60px auto; /* Centered with more bottom margin */
+      max-width: 65%; /* Slightly larger preview */
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Refined shadow */
+      transition: transform 0.3s ease; /* Added hover effect */
+    }
+
+    .resume-preview-image:hover {
+        transform: scale(1.02); /* Subtle zoom on hover */
+    }
+
+    .testimonials-heading {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 45px;
+      color: #2d3748;
+    }
+
+    .testimonial-card {
+      max-width: 750px; /* Wider cards */
+      margin: 0 auto 45px auto; /* Centered with more bottom margin */
+      background: #ffffff;
+      padding: 35px; /* More padding */
+      border-radius: 25px; /* Softer border-radius */
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+      display: flex; /* Use flexbox for internal alignment */
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease; /* Added hover effect */
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px); /* Subtle lift on hover */
+    }
+
+    .testimonial-card img {
+      width: 85px; /* Slightly larger avatar */
+      height: 85px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #e2e8f0; /* Subtle border around avatar */
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      font-size: 17px;
+      margin-bottom: 15px;
+      color: #4a5568;
+    }
+
+    .testimonial-card strong {
+      font-size: 16px;
+      color: #2d3748;
+    }
+
+    /* Footer Styling */
+    .site-footer {
+      background-color: #1a1a1a; /* Darker footer */
+      color: #e0e0e0; /* Lighter text color */
+      padding: 50px 0; /* More padding */
+      font-size: 15px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 25px; /* Adjusted padding */
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px; /* Space between columns */
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 220px; /* Slightly wider minimum width */
+      margin-right: 20px; /* Keep some margin for older browsers */
+    }
+
+    .footer-column:last-child {
+        margin-right: 0; /* No margin on the last column */
+    }
+
+    .footer-column h3 {
+      font-size: 19px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .footer-column ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px; /* Space between list items */
+    }
+
+    .footer-column ul li a {
+      color: #c0c0c0; /* Softer link color */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: #007bff; /* Highlight on hover */
+    }
+
+    .footer-bottom-text {
+      text-align: center;
+      margin-top: 35px; /* More space above copyright */
+      font-size: 14px;
+      color: #a0a0a0;
+    }
+
+    /* Small adjustments for very small screens */
+    @media (max-width: 480px) {
+        .main-nav a {
+            margin: 0 5px;
+            font-size: 14px;
+        }
+        .hero-content h2 {
+            font-size: 32px;
+        }
+        .hero-content p {
+            font-size: 16px;
+        }
+        .section-title, .testimonials-heading {
+            font-size: 28px;
+        }
+        .testimonial-card {
+            padding: 25px;
+        }
+        .footer-column {
+            min-width: 100%; /* Stack columns on very small screens */
+            text-align: center;
+            margin-right: 0;
+        }
+        .footer-column ul {
+            margin-bottom: 20px;
+        }
+    }
+
+  
